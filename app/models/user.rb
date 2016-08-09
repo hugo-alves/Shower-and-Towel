@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, omniauth_providers: [:facebook]
+  mount_uploader :profile_pic, AvatarUploader
+
 
   def self.find_for_facebook(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
