@@ -45,8 +45,14 @@
     <% else %>
 
       <!-- Login text link -->
-      <%= render 'shared/login_form' %>
+      <div class="dropdown">
 
+        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Login</button>
+
+        <div class="dropdown-menu dropdown-menu-right">
+          <%= render 'shared/login_form' %>
+        </div>
+      </div>
     <% end %>
 
     <!-- Button (call-to-action) -->
