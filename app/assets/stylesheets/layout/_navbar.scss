@@ -129,3 +129,17 @@
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
 }
+.dropdown-menu {
+  padding:20px 20px 10px 20px !important;
+  border-radius: 4px;
+
+  input {
+    margin-bottom:5px;
+  };
+  label {
+    font-size: 12px;
+  }
+  .btn {
+    margin-bottom: 0px;
+  }
+}
