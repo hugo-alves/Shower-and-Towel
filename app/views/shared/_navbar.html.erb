@@ -23,7 +23,7 @@
         <div class="dropdown">
         <% if user_signed_in? && current_user.facebook_picture_url %>
           <%= image_tag current_user.facebook_picture_url, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
-          <% else %>
+        <% else %>
           <%= image_tag "http://placehold.it/30x30", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
         <% end %>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
@@ -60,7 +60,10 @@
       <%= link_to "Sign up", new_user_registration_path, class: "navbar-wagon-item navbar-wagon-button btn" %>
     <% end %>
 
+<<<<<<< HEAD
+=======
     <!-- Button (call-to-action) -->
+>>>>>>> 602b530492dbd3d009066a16ef6f7e46c9acb408
   </div>
 
   <!-- Dropdown list appearing on mobile only -->
