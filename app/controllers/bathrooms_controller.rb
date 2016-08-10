@@ -1,4 +1,5 @@
 class BathroomsController < ApplicationController
+<<<<<<< HEAD
   def new
     @bathroom = Bathroom.new
   end
@@ -14,6 +15,15 @@ class BathroomsController < ApplicationController
   def bath_params
     params.require(:bathroom).permit(:user_id, :accepted_gender, :price, :address, :shampoo, :shower_gel, :towel, :category)
   end
+
+  def index
+    @bathrooms = Bathroom.all
+  end
+
+  def show
+    @bathroom = Bathroom.find(params[:id])
+  end
+
 end
 
 
