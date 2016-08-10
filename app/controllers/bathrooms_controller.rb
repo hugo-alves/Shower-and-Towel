@@ -15,6 +15,12 @@ class BathroomsController < ApplicationController
 
   def show
     @bathroom = Bathroom.find(params[:id])
+    # byebug
+    # @coordinates = { lat: @bathroom.latitude, lng: @bathroom.longitude }
+    @hash = Gmaps4rails.build_markers(@bathroom) do |bath, marker|
+      marker.lat bath[:lat]
+      marker.lng bath[:lng]
+    end
   end
 
 
