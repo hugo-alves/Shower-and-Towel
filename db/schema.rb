@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160810095400) do
+ActiveRecord::Schema.define(version: 20160810131853) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20160810095400) do
     t.integer  "price"
     t.text     "address"
     t.string   "accepted_gender"
-    t.string   "type"
+    t.string   "category"
     t.boolean  "towel",           default: false
     t.boolean  "shower_gel",      default: false
     t.boolean  "shampoo",         default: false
