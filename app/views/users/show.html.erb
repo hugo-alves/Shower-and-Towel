@@ -1,0 +1,17 @@
+<div class="text-center ">
+  <h1>Hello <%=@user.first_name; @user.last_name %></h1>
+  <div class="container">
+    <div class="form-inputs grey-wrapper wrapper text-left">
+      <div class="text-right">
+        <p><%= image_tag(@user.profile_pic, class: "user-picture") %></p>
+      </div>
+      <h4>Email:</h4>
+      <p><%= @user.email %></p>
+      <h4>Gender:</h4>
+      <p><%= @user.gender%></p>
+    </div>
+
+     <p> <%= link_to "Edit profile", edit_user_registration_path, class:"btn btn-default btn-edit-profil"%></p>
+
+  </div>
+</div>

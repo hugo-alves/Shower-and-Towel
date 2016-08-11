@@ -10,7 +10,12 @@ class BathroomsController < ApplicationController
   end
 
   def index
-    @bathrooms = Bathroom.all
+    # bathrooms near specific place that will be determined by geolocation API
+    @bathrooms = Bathroom.near([38.7107236, -9.152806199999999], 2)
+    @hash = Gmaps4rails.build_markers(@bathrooms) do |bath, markers|
+      markers.lat bath.latitude
+      markers.lng bath.longitude
+    end
   end
 
   def show
@@ -20,7 +25,7 @@ class BathroomsController < ApplicationController
       marker.lat bath.latitude
       marker.lng bath.longitude
     end
-    
+
   end
 
 
