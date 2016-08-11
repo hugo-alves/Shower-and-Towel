@@ -6,6 +6,7 @@ class BathroomsController < ApplicationController
   def create
     @bathroom = current_user.bathrooms.new(bath_params)
     @bathroom.save
+    raise
     redirect_to new_bathroom_path
   end
 
@@ -39,7 +40,7 @@ class BathroomsController < ApplicationController
   private
 
   def bath_params
-    params.require(:bathroom).permit(:user_id, :accepted_gender, :price, :address, :shampoo, :shower_gel, :towel, :category)
+    params.require(:bathroom).permit(:user_id, :picture, :picture_cache, :accepted_gender, :price, :address, :shampoo, :shower_gel, :towel, :category)
   end
 
 end
