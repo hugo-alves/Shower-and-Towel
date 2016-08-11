@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+  resources :bathrooms do
+    resources :bookings, :only => [:index, :create, :new]
+  end
   get 'users/show'
 
-  resources :bathrooms
   devise_for :users,
     controllers: { omniauth_callbacks: 'users/omniauth_callbacks',
                    registrations: 'registrations' }
