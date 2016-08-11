@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="form-inline">
+    <%= form_tag(bathrooms_path, :method => 'get', id: 'search-form') do |f| %>
+      <div class="form-group">
+        <%= text_field_tag :search, params[:search], placeholder: "Search Bathrooms", class:"form-control" %>
+      </div>
+      <%= submit_tag "Search Bathrooms", class:"btn-signup" %>
+    <% end %>
+  </div>
+</div>
