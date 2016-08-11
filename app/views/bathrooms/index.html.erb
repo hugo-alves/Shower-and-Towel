@@ -1,14 +1,10 @@
 <div class="text-center ">
-<h1>Bathrooms </h1>
+  <h1>Bathrooms </h1>
 
-<div class="container">
-<% @bathrooms.each do |bathroom| %>
-<div class="grey-wrapper wrapper text-left">
-  <p>Address: <%= bathroom.address %></p>
-  <p>Price: <%= bathroom.price %></p>
-  <p>Accepted gender: <%= bathroom.accepted_gender %></p>
+  <div class="container">
+    <% @bathrooms.each do |bathroom| %>
+    <%= render "shared/bathroom", bathroom: bathroom %>
+    <p><%= link_to 'Show', bathroom_path(bathroom), class: 'btn btn-default btn-show' %></p>
+    <% end %>
   </div>
-  <p><%= link_to 'Show', bathroom_path(bathroom), class: 'btn btn-default btn-show' %></p>
-<% end %>
-</div>
 </div>
