@@ -2,7 +2,7 @@
   <h1>Bathroom </h1>
   <div class="container">
     <div class="form-inputs grey-wrapper wrapper text-left">
-      <p><%= image_tag(@bathroom.picture, :class => "bath-picture") %></p>
+      <p><%= cl_image_tag(@bathroom.picture, :class => "bath-picture") %></p>
       <h4>Description:</h4>
       <p><%= @bathroom.description %></p>
       <h4>Category:</h4>

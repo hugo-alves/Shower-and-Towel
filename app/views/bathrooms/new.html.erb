@@ -26,6 +26,8 @@
         :collection => [['Female', 'Female'], ['Male', 'Male'], ['Both', 'Both']],
         :as => :radio_buttons,
         :item_wrapper_class => 'radio-inline' %>
+        <%= f.input :picture_cache, as: :hidden %>
+        <%= f.input :picture %>
       </div>
       </div>
     </div>
