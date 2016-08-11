@@ -1,32 +1,36 @@
-<div class="container" id="add_bathroom">
-  <div class="row">
-    <div class="col-sm-6 col-sm-offset-3">
-      <%= simple_form_for @bathroom do |f| %>
+<div class="text-center ">
+  <div class="container" id="add_bathroom">
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3">
+      <div class="grey-wrapper wrapper">
+        <%= simple_form_for @bathroom do |f| %>
         <%= f.input :price %>
         <%= f.input :address %>
         <%= f.input :towel,
-                    :collection => [['Available', true], ['Not Available', false]],
-                    :as => :radio_buttons,
-                    :item_wrapper_class => 'radio-inline' %>
+        :collection => [['Available', true], ['Not Available', false]],
+        :as => :radio_buttons,
+        :item_wrapper_class => 'radio-inline' %>
         <%= f.input :shower_gel,
-                    :collection => [['Available', true], ['Not Available', false]],
-                    :as => :radio_buttons,
-                    :item_wrapper_class => 'radio-inline' %>
+        :collection => [['Available', true], ['Not Available', false]],
+        :as => :radio_buttons,
+        :item_wrapper_class => 'radio-inline' %>
         <%= f.input :shampoo,
-                    :collection => [['Available', true], ['Not Available', false]],
-                    :as => :radio_buttons,
-                    :item_wrapper_class => 'radio-inline' %>
+        :collection => [['Available', true], ['Not Available', false]],
+        :as => :radio_buttons,
+        :item_wrapper_class => 'radio-inline' %>
         <%= f.input :category,
-                    :collection => [['Bathtub', 'Bathtub'], ['Shower', 'Shower']],
-                    :as => :radio_buttons,
-                    :item_wrapper_class => 'radio-inline' %>
+        :collection => [['Bathtub', 'Bathtub'], ['Shower', 'Shower']],
+        :as => :radio_buttons,
+        :item_wrapper_class => 'radio-inline' %>
         <%= f.input :accepted_gender,
-                    :collection => [['Female', 'Female'], ['Male', 'Male'], ['Both', 'Both']],
-                    :as => :radio_buttons,
-                    :item_wrapper_class => 'radio-inline' %>
-        <%= f.button :submit %>
-      <% end %>
+        :collection => [['Female', 'Female'], ['Male', 'Male'], ['Both', 'Both']],
+        :as => :radio_buttons,
+        :item_wrapper_class => 'radio-inline' %>
+      </div>
+      </div>
     </div>
-  </div>
+    <p> <%= f.button :submit, class:"btn btn-default btn-edit-profil" %></p>
+    <% end %>
 </div>
+
 
