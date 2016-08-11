@@ -3,11 +3,11 @@
     <h1>Shower and Towel</h1>
     <p>Clean your smelly ass everywhere</p>
     <% if user_signed_in? %>
-      <%= link_to "Take a shower", bathrooms_path, class:"btn btn-success" %>
-      <%= link_to "Announce your Bathroom", new_bathroom_path, class: "btn btn-primary" %>
+      <%= link_to "Take a shower", bathrooms_path, class:"btn btn-success btn-lg" %>
+      <%= link_to "Announce your Bathroom", new_bathroom_path, class: "btn btn-primary btn-lg" %>
     <% else %>
-      <%= link_to "Take a shower", new_user_registration_path, class:"btn btn-success" %>
-      <%= link_to "Announce your Bathroom", new_user_registration_path, class: "btn btn-primary" %>
+      <%= link_to "Take a shower", new_user_registration_path, class:"btn btn-success btn-lg" %>
+      <%= link_to "Announce your Bathroom", new_user_registration_path, class: "btn btn-primary btn-lg" %>
     <% end %>
   </div>
 </div>
