@@ -18,8 +18,8 @@ class BathroomsController < ApplicationController
     # byebug
     # @coordinates = { lat: @bathroom.latitude, lng: @bathroom.longitude }
     @hash = Gmaps4rails.build_markers(@bathroom) do |bath, marker|
-      marker.lat bath[:lat]
-      marker.lng bath[:lng]
+      marker.lat bath.latitude
+      marker.lng bath.longitude
     end
   end
 
