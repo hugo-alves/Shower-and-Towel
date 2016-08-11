@@ -1,0 +1,14 @@
+<div class="text-center ">
+  <h1>Hello <%=@user.first_name; @user.last_name %></h1>
+  <div class="container">
+    <div class="form-inputs grey-wrapper wrapper text-left">
+      <div class="text-right">
+        <p><%= image_tag(@user.profile_pic, class: "user-picture") %></p>
+      </div>
+      <h4>Email:</h4>
+      <p><%= @user.email %></p>
+      <h4>Gender:</h4>
+      <p><%= @user.gender%></p>
+    </div>
+    </div>
+</div>
