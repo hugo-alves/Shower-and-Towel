@@ -21,6 +21,7 @@ gem 'carrierwave'
 gem 'cloudinary'
 
 
+
 group :development, :test do
   gem 'binding_of_caller'
   gem 'better_errors'
@@ -28,6 +29,7 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'spring'
+  gem 'rails_db'
 
 
 end

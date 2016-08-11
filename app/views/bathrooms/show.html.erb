@@ -1,11 +1,29 @@
 <div class="text-center ">
-<h1>Bathroom </h1>
-<div class="container">
-<div class="form-inputs grey-wrapper wrapper text-left">
-<p>Address: <%= @bathroom.address %></p>
-<p>Price: <%= @bathroom.price %></p>
-<p>Accepted gender: <%= @bathroom.accepted_gender %></p>
- </div>
-  <p><%= link_to 'Instant Book', bathroom_path(), class: 'btn btn-alarm', id:"btn-booked" %></p>
+  <h1>Bathroom </h1>
+  <div class="container">
+    <div class="form-inputs grey-wrapper wrapper text-left">
+      <p><%= image_tag(@bathroom.picture, :class => "bath-picture") %></p>
+      <h4>Description:</h4>
+      <p><%= @bathroom.description %></p>
+      <h4>Category:</h4>
+      <p><%= @bathroom.category %></p>
+      <h4>Address:</h4>
+      <p><%= @bathroom.address %></p>
+      <h4>Provides Towel:</h4>
+      <p><%= @bathroom.towel ? "Yes" : "No" %></p>
+      <h4>Provides Shower Gel:</h4>
+      <p><%= @bathroom.shower_gel ? "Yes" : "No" %></p>
+      <h4>Provides Shampoo:</h4>
+      <p><%= @bathroom.shampoo ? "Yes" : "No" %></p>
+      <h4>Accepted gender:</h4>
+      <p><%= @bathroom.accepted_gender.capitalize %></p>
+      <h4>Price:</h4>
+      <p><%= @bathroom.price %>€</p>
+
+
+    </div>
+    <p><%= link_to 'Instant Book', bathroom_path(), class: 'btn btn-alarm', id:"btn-booked" %></p>
+  </div>
 </div>
-</div>
+
+
