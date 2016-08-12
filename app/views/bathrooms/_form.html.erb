@@ -2,6 +2,7 @@
       <div class="col-sm-6 col-sm-offset-3">
       <div class="grey-wrapper wrapper">
         <%= simple_form_for @bathroom do |f| %>
+        <%= f.input :description %>
         <%= f.input :price %>
         <%= f.input :address %>
         <%= f.input :towel,

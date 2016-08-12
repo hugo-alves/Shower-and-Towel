@@ -24,8 +24,8 @@
     </div>
     <%= simple_form_for [@bathroom, Booking.new] do |f| %>
       <%= f.fields_for :bookings do |b| %>
-        <%= b.text_field :book_time, :value=>Date.today.strftime('%d-%m-%Y'), :id =>"dp5" %>
-        <% end %>
+        <%= b.input :book_time, as: :datetime_picker, :label => 'Date field' %>
+      <% end %>
       <div class="form-actions">
         <%= f.button :submit %>
       </div>

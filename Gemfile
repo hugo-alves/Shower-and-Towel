@@ -23,6 +23,8 @@ gem "coffee-rails"
 gem "gmaps4rails"
 gem 'jquery-ui-rails'
 gem 'appsignal'
+gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: 'master', submodules: true
+gem 'momentjs-rails', '~> 2.9',  :github => 'derekprior/momentjs-rails'
 
 
 source 'https://rails-assets.org' do
