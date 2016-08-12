@@ -4,7 +4,7 @@
     <div class="row">
       <div id="margin-booking" class="col-md-6 col-md-offset-3">
         <p>Name: <%= @booking.user.name%></p>
-        <p>Owner: <%= @booking.bathroom.user %></p>
+        <p>Owner: <%= User.find(Bathroom.find(@booking.bathroom_id).user_id).name %></p>
         <p>Address: <%= @booking.bathroom.address %></p>
         <p>Price: <%= @booking.price %>€</p>
         <p>Boook date: <%= @booking.book_time.strftime("%d %m %Y, %Hh%M") %></p>
