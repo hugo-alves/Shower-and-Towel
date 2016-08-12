@@ -12,7 +12,7 @@ class BathroomsController < ApplicationController
   def index
     # bathrooms near specific place that will be determined by geolocation API
     if params[:search].nil?
-      @bathrooms = Bathroom.near([38.7107236, -9.152806199999999], 1)
+      @bathrooms = Bathroom.near([38.7107236, -9.152806199999999], 10)
       set_hash(@bathrooms)
     else
       @bathrooms = Bathroom.near(params[:search], 1)
@@ -39,7 +39,7 @@ class BathroomsController < ApplicationController
   private
 
   def bath_params
-    params.require(:bathroom).permit(:user_id, :picture, :picture_cache, :accepted_gender, :price, :address, :shampoo, :shower_gel, :towel, :category)
+    params.require(:bathroom).permit(:description, :user_id, :picture, :picture_cache, :accepted_gender, :price, :address, :shampoo, :shower_gel, :towel, :category)
   end
 
 end
