@@ -3,10 +3,12 @@ Rails.application.routes.draw do
     resources :bookings, :only => [:index, :create, :new, :show]
   end
 
-    resources :users do
+  resources :users do
     resources :bookings, :only => [:index, :create, :new, :show]
   end
+
   resources :bookings, only: :show
+  
   get 'users/show'
 
   devise_for :users,

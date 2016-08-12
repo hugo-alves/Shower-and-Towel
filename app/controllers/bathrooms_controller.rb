@@ -8,7 +8,7 @@ class BathroomsController < ApplicationController
   def create
     @bathroom = current_user.bathrooms.new(bath_params)
     @bathroom.save
-    redirect_to new_bathroom_path
+    redirect_to bathroom_path(@bathroom)
   end
 
   def index
