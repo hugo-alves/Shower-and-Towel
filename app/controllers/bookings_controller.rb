@@ -19,7 +19,7 @@ class BookingsController < ApplicationController
       bathroom_id: @bathroom.id,
       user_id: current_user.id,
       price: @bathroom.price,
-      book_time: params[:booking][:book_time] ))
+      book_time: params[:booking][:bookings][:book_time] ))
 
     redirect_to bathroom_path(@bathroom.id), notice: "Your booking has been created..."
   end
