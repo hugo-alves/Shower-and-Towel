@@ -1,16 +1,24 @@
 <div class="text-center ">
-  <%= render 'pages/form' %>
   <h1>Bookings </h1>
-</div>
-<div class="row-fluid">
-
-  <div class="col-md-6">
+  <div class="container">
     <% @bookings.each do |booking| %>
-    <p>Name: <%= booking.user.name%></p>
-    <p>Address: <%= booking.bathroom.address %></p>
-    <p>Price: <%= booking.price %>€</p>
-    <p>Boook date: <%= booking.book_time %></p>
-    <p><%= link_to 'Show', booking_path(booking), class: 'btn btn-default btn-show' %></p>
-      <% end %>
-  </div>
+    <div class="grey-wrapper wrapper text-left">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+        <div class="text-center">
+          <p><%= cl_image_tag(booking.bathroom.picture, :class => "bath-picture", :width => 150, :height => 100, :crop => :fill) %></p>
+        </div>
+          <p>Name: <%= booking.user.name%></p>
+          <p>Address: <%= booking.bathroom.address %></p>
+          <p>Price: <%= booking.price %>€</p>
+          <p>Boook date: <%= booking.book_time.strftime("%d %m %Y, %Hh%M") %></p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-2 col-xs-offset-5">
+        <p><%= link_to 'Show', booking_path(booking), class: 'btn btn-default btn-show' %></p>
+      </div>
+    </div>
+    <% end %>
 </div>
