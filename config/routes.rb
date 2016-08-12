@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+
+  get 'users/bathrooms', to: 'users#user_bathrooms'
+
+  devise_for :users,
+    controllers: { omniauth_callbacks: 'users/omniauth_callbacks',
+                   registrations: 'registrations' }
+
   resources :bathrooms do
     resources :bookings, :only => [:index, :create, :new, :show]
   end
@@ -8,15 +15,10 @@ Rails.application.routes.draw do
   end
 
   resources :bookings, only: :show
-  
+
   get 'users/show'
 
-  devise_for :users,
-    controllers: { omniauth_callbacks: 'users/omniauth_callbacks',
-                   registrations: 'registrations' }
   root to: 'pages#home'
-
-  get 'users/bathrooms', to: 'users#user_bathrooms'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
