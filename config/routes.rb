@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :bathrooms do
     resources :bookings, :only => [:index, :create, :new]
   end
+
   get 'users/show'
 
   devise_for :users,
@@ -9,7 +10,7 @@ Rails.application.routes.draw do
                    registrations: 'registrations' }
   root to: 'pages#home'
 
-  get 'bathrooms/search', to: 'bathrooms#search'
+  get 'users/bathrooms', to: 'users#user_bathrooms'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
