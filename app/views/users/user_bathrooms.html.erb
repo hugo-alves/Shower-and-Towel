@@ -1,5 +1,5 @@
 <div class="text-center">
-<h1><%= current_user.name.capitalize %> Bathrooms</h1>
+<h1>Your Bathrooms</h1>
   <div class="container">
   <% @bathrooms.each do |bathroom| %>
     <%= render 'shared/bathroom', bathroom: bathroom %>
