@@ -22,6 +22,7 @@ gem 'cloudinary'
 gem "coffee-rails"
 gem "gmaps4rails"
 gem 'jquery-ui-rails'
+gem 'appsignal'
 
 
 source 'https://rails-assets.org' do

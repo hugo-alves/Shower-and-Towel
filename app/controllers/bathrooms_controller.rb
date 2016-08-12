@@ -6,7 +6,6 @@ class BathroomsController < ApplicationController
   def create
     @bathroom = current_user.bathrooms.new(bath_params)
     @bathroom.save
-    raise
     redirect_to new_bathroom_path
   end
 
