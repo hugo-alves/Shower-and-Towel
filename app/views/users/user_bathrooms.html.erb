@@ -1,0 +1,14 @@
+<div class="text-center">
+<h1><%= current_user.name.capitalize %> Bathrooms</h1>
+  <div class="container">
+  <% @bathrooms.each do |bathroom| %>
+    <%= render 'shared/bathroom', bathroom: bathroom %>
+      <ul class="list-unstyled list-inline">
+        <li><%= link_to 'Show', bathroom_path(bathroom), class: 'btn btn-default btn-show' %></li>
+        <li><%= link_to 'Edit', edit_bathroom_path(bathroom), class: 'btn btn-success btn-show' %></li>
+        <li><%= link_to 'Delete', bathroom_path(bathroom), method: :delete, class: 'btn btn-danger' %></li>
+    </ul>
+  <%end %>
+  </div>
+  <%= link_to "New Bathroom", new_bathroom_path, class:"btn btn-primary" %>
+</div>
