@@ -10,14 +10,13 @@ class BathroomsController < ApplicationController
     @bathroom.save
     redirect_to bathroom_path(@bathroom)
   end
-
   def index
-    # bathrooms near specific place that will be determined by geolocation API
     if params[:search].nil?
-      @bathrooms = Bathroom.near([38.7107236, -9.152806199999999], 10)
+      ip = request.remote_ip
+      @bathrooms = Bathroom.near("#{ip}", 10)
       set_hash(@bathrooms)
     else
-      @bathrooms = Bathroom.near(params[:search], 1)
+      @bathrooms = Bathroom.near(params[:search], 10)
       set_hash(@bathrooms)
     end
   end
