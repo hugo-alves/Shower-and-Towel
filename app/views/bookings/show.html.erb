@@ -1,15 +1,14 @@
 <div class="text-center ">
-  <%= render 'pages/form' %>
   <h1>Booking </h1>
-</div>
-<div class="row-fluid">
-
-  <div class="col-md-6">
-
-    <p>Name: <%= @booking.user.name%></p>
-    <p>dono: <%= @booking.bathroom.user %></p>
-    <p>Address: <%= @booking.bathroom.address %></p>
-    <p>Price: <%= @booking.price %>€</p>
-    <p>Boook date: <%= @booking.book_time %></p>
+  <div class="grey-wrapper wrapper text-left ">
+    <div class="row">
+      <div id="margin-booking" class="col-md-6 col-md-offset-3">
+        <p>Name: <%= @booking.user.name%></p>
+        <p>dono: <%= @booking.bathroom.user %></p>
+        <p>Address: <%= @booking.bathroom.address %></p>
+        <p>Price: <%= @booking.price %>€</p>
+        <p>Boook date: <%= @booking.book_time.strftime("%d %A %Y, %Hh%M") %></p>
+      </div>
+    </div>
   </div>
 </div>
