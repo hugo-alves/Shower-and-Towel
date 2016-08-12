@@ -3,6 +3,10 @@ class UsersController < ApplicationController
     @user = current_user
   end
 
+  def user_bathrooms
+    @bathrooms = current_user.bathrooms
+  end
+
   private
 
   def user_params
