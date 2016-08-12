@@ -2,9 +2,10 @@
  * Fonts
  * ------------------------------------- */
 // Google fonts
-@import url("https://fonts.googleapis.com/css?family=EB+Garamond|Quicksand");
-$base-font: "EB Garamond", "Helvetica", "sans-serif";
-$header-font: "Quicksand", "Helvetica", "sans-serif";
+// @import url("https://fonts.googleapis.com/css?family=EB+Garamond|Quicksand");
+@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:400,600|Josefin+Sans:400,600);
+$base-font: "Josefin Sans", "Helvetica", "sans-serif";
+$header-font: "Josefin Slab", "Helvetica", "sans-serif";
 
 
 
